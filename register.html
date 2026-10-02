@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create New Account</title>
+    <link rel="stylesheet" href="register_page.css">
+    <script>
+        function handleRegister(event) {
+            event.preventDefault();
+            
+            let name = document.getElementById("name").value;
+            let mobile = document.getElementById("mobile").value;
+            let email = document.getElementById("email").value;
+            let password = document.getElementById("password").value;
+            let confirmPassword = document.getElementById("confirm-password").value;
+
+            if (!email.endsWith("@gmail.com")) {
+                alert("Please enter a valid E-mail !");
+                return false;
+            }
+
+            if (mobile.length !== 10 || isNaN(mobile)) {
+                alert("Please enter a valid mobile number!");
+                return false;
+            }
+
+            if (password !== confirmPassword) {
+                alert("Password does not match, please check again.");
+                return false;
+            }
+ 
+            localStorage.setItem("savedName", name);
+            localStorage.setItem("savedEmail", email);
+            localStorage.setItem("savedPassword", password);
+
+            alert("Account created successfully.");
+            window.location.href = "login.html";
+        }
+    </script>
+</head>
+<body>
+    <div class="register_form">
+        <form onsubmit="handleRegister(event)">
+            <h2>Create New Account</h2>
+            
+            <label for="name">Full Name: </label>
+            <input type="text" id="name" placeholder="Enter your name" required>
+            
+            <label for="mobile">Mobile no.: </label>
+            <input type="tel" id="mobile" placeholder="Enter 10-digit mobile number" required>
+
+            <label for="email">Email: </label>
+            <input type="email" id="email" placeholder="example@gmail.com" required>
+            
+            <label for="password">Password: </label>
+            <input type="password" id="password" placeholder="Create a password" required>
+            
+            <label for="confirm-password">Confirm Password: </label>
+            <input type="password" id="confirm-password" placeholder="Re-enter password" required>
+            
+            <input type="submit" value="Register" class="submit">
+            
+            <p style="text-align: center; margin-top: 15px; font-size: 16px;">
+                Already have you a account? <a href="login.html" class="login_page_sign_up">Login</a>
+            </p>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,30 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+h1{
+    text-align: center;
+    color: green;
+    font-size: 40px;
+}
+
+p {
+    text-align: center;
+    font-size: 25px;
+}
+.back_button {
+    color: white;
+    background-color: #107e99;
+    text-decoration: none;
+    border-radius: 5px;
+    padding: 5px;
+    margin-left: 31%;
+    margin-right: 31%;
+}
+
+.back_button:hover {
+    background-color: rgb(59, 59, 244);
+}

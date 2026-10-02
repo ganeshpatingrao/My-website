@@ -1,0 +1,48 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.dashboard_page_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: -8px;
+    padding: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    background-color: aliceblue;
+    flex-wrap: wrap;
+}
+
+.dashboard_button {
+    border: none;
+    border-radius: 7px;
+    margin: 10px;
+    padding:  9px;
+    color: white;
+    background-color: blue;
+    text-decoration: none;
+    cursor: pointer;
+    background: linear-gradient(135deg, #ff6b4a, #ff3b30);
+    font-size: 16px;
+    font-weight: 600;
+    box-shadow: 0 9px 25px rgba(255, 75, 43, 0.40);
+    transition: all 0.3s ease;
+}
+
+.dashboard_button:hover {
+    box-shadow: 0 6px 20px rgba(255, 75, 43, 0.5);
+}
+
+.dashboard_button:hover {
+    background-color:bisque;
+    color: black;
+}
+
+.profile_page {
+    height: 100vh;
+}
+
+.profile_card {
+    text-align: center;
+    margin: 10px;
+}

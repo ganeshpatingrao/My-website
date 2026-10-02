@@ -1,0 +1,75 @@
+body {
+    background-color: aliceblue;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.login_form {
+    background-color: #ffffff;
+    padding: 30px 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    box-sizing: border-box;
+}
+
+form h2 {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+}
+
+#email, #password {
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.submit {
+    border: none;
+    border-radius: 8px;
+    padding: 10px;
+    background-color: #0866ff;
+    color: white;
+    width: 100%;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.submit:hover {
+    background-color: #0556d4;
+}
+
+.login_form p {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.login_page_sign_up {
+    text-decoration: none;
+    color: rgb(237, 154, 52);
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.login_page_sign_up:hover {
+    color: #0866ff;
+    text-decoration: underline;
+}

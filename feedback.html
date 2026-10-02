@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>feedback</title>
+    <link rel="stylesheet" href="feedback.css">
+</head>
+<body>
+    <div>
+        <h1 class="heading">Feedback</h1><br>
+        <label for="Feeling" class="feeling_label">Feeling:</label>
+        <select class="feeling_menu" name="Feeling">
+            <option value="Outstanding">Outstanding</option>
+            <option value="Happy">Happy</option>
+            <option value="Bad">Bad</option>
+            <option value="Nothing">Nothing</option>
+        </select><br>
+
+        <label for="Rating" class="rating_label">Rating:</label>
+        <select class="rating_menu" name="Rating">
+            <option value="5">5</option>
+            <option value="4">4</option>
+            <option value="3">3</option>
+            <option value="2">2</option>
+            <option value="1">1</option>
+        </select><br>
+
+        <label for="feedback" class="feedback_brief_label">Write your feedback in brief:</label><br>
+        <textarea class="feedback_box" rows="6" cols="45" name="feedback" placeholder="Type your feedback here..." required></textarea><br>
+        <a href="feedback_submit.html" class="submit_feedback">Submit</a>
+    </div>
+</body>
+</html>
