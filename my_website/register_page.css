@@ -1,8 +1,4 @@
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
     background-color: #f0f2f5;
     margin: 0;
     font-family: Arial, sans-serif;
@@ -13,6 +9,10 @@ body {
     padding: 30px 40px;
     border-radius: 12px;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px auto;
     width: 100%;
     max-width: 420px;
     box-sizing: border-box;
@@ -43,6 +43,7 @@ body {
     border-radius: 6px;
     font-size: 14px;
     box-sizing: border-box;
+    width: 330px;
 }
 
 .register_form .submit {
