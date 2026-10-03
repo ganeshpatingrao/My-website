@@ -1,0 +1,172 @@
+body {
+    margin: 0;
+    font-family: 'Poppins', Arial, sans-serif;
+    background: linear-gradient(135deg, #ff9966, #ff5e62, #6a11cb, #2575fc);
+    background-size: 400% 400%;
+    animation: gradientBG 10s ease infinite;
+    color: white;
+    overflow: hidden;
+    height: 100vh;
+}
+
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.curtain {
+    position: fixed;
+    top: 0;
+    height: 100vh;
+    background: linear-gradient(45deg, #8e2de2, #4a00e0);
+    z-index: 10;
+    transition: transform 1.2s cubic-bezier(0.77, 0, 0.175, 1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#left-curtain {
+    left: 0;
+    width: 50%;
+    border-right: 3px solid #ffeb3b;
+}
+
+#right-curtain {
+    right: 0;
+    width: 50%;
+    border-left: 3px solid #ffeb3b;
+}
+
+.curtain.open-left {
+    transform: translateX(-100%);
+}
+
+.curtain.open-right {
+    transform: translateX(100%);
+}
+
+.curtain-title {
+    color: #ffeb3b;
+    font-size: 40px;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+}
+
+.curtain-subtitle {
+    color: #fff;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+#start-btn {
+    padding: 18px 40px;
+    font-size: 22px;
+    font-weight: bold;
+    color: #111;
+    background: linear-gradient(135deg, #f7ff00, #db36a4);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 8px 25px rgba(247, 255, 0, 0.5);
+    transition: 0.3s;
+    text-transform: uppercase;
+}
+
+#start-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 12px 35px rgba(219, 54, 164, 0.8);
+}
+
+#ppt-container {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(15, 12, 41, 0.95);
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 40px 60px;
+    box-sizing: border-box;
+    z-index: 5;
+}
+
+.ppt-main-title {
+    text-align: center;
+    color: #ffeb3b;
+    text-shadow: 0 0 10px rgba(255,235,59,0.5);
+}
+
+#exit-btn {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    padding: 8px 18px;
+    font-size: 14px;
+    font-weight: bold;
+    background-color: #ff4757;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(255, 71, 87, 0.4);
+    transition: 0.3s;
+    z-index: 100;
+}
+
+#exit-btn:hover {
+    background-color: #ff6b81;
+    transform: scale(1.05);
+}
+
+.slide-box {
+    background: linear-gradient(135deg, #1f4068, #e94560);
+    border-radius: 20px;
+    padding: 50px;
+    text-align: center;
+    font-size: 36px;
+    font-weight: bold;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    margin: auto;
+    max-width: 800px;
+    width: 100%;
+    display: none;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.slide-box.active {
+    display: block;
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+.controls {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.ctrl-btn {
+    padding: 12px 25px;
+    font-size: 18px;
+    font-weight: bold;
+    background: linear-gradient(135deg, #00b4db, #0083b0);
+    color: white;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0, 180, 219, 0.4);
+    transition: 0.3s;
+}
+
+.ctrl-btn:hover {
+    background: linear-gradient(135deg, #0083b0, #00b4db);
+    transform: scale(1.05);
+}

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colorful Curtain Presentation</title>
+    <link rel="stylesheet" href="presentation_page.css">
+</head>
+<body>
+
+    <div id="left-curtain" class="curtain">
+        <h1 class="curtain-title">Welcome</h1>
+    </div>
+
+    <div id="right-curtain" class="curtain">
+        <h2 class="curtain-subtitle">Ready for Presentation?</h2>
+        <button id="start-btn" onclick="startPresentation()">Start Show ✨</button>
+    </div>
+
+    <div id="ppt-container">
+        <button id="exit-btn" onclick="exitPresentation()">Exit</button>
+
+        <h1 class="ppt-main-title">🚀 My Awesome Presentation</h1>
+        
+        <div class="slide-box active">Slide 1: Welcome to My Web Project! 💻✨</div>
+        <div class="slide-box">Slide 2: Designing with HTML, CSS & JS 🎨🔥</div>
+        <div class="slide-box">Slide 3: Python & Automation Power 🐍⚡</div>
+        <div class="slide-box">Slide 4: Thank You 🎉</div>
+
+        <div class="controls">
+            <button class="ctrl-btn" onclick="prevSlide()">⬅ Previous</button>
+            <button class="ctrl-btn" onclick="nextSlide()">Next ➡</button>
+        </div>
+    </div>
+
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide-box');
+
+        function startPresentation() {
+            document.getElementById('left-curtain').classList.add('open-left');
+            document.getElementById('right-curtain').classList.add('open-right');
+
+            let elem = document.documentElement;
+            if (elem.requestFullscreen) {
+                elem.requestFullscreen();
+            }
+
+            setTimeout(() => {
+                document.getElementById('left-curtain').style.display = 'none';
+                document.getElementById('right-curtain').style.display = 'none';
+                document.getElementById('ppt-container').style.display = 'flex';
+            }, 1000);
+        }
+
+        function exitPresentation() {
+            if (document.exitFullscreen) {
+                document.exitFullscreen();
+            } else if (document.webkitExitFullscreen) {
+                document.webkitExitFullscreen();
+            }
+
+            window.location.href = "presentation.html"; 
+        }
+
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.classList.remove('active');
+                if (i === index) {
+                    slide.classList.add('active');
+                }
+            });
+        }
+
+        function nextSlide() {
+            if (currentSlide < slides.length - 1) {
+                currentSlide++;
+                showSlide(currentSlide);
+            }
+        }
+
+        function prevSlide() {
+            if (currentSlide > 0) {
+                currentSlide--;
+                showSlide(currentSlide);
+            }
+        }
+    </script>
+
+</body>
+</html>

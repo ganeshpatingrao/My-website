@@ -32,23 +32,25 @@
     </script>
 </head>
 <body>
-    <form class="login_form" onsubmit="handleLogin(event)">
-        <h2>Login</h2>
-        
-        <label  for="email">Email: </label>
-        <input type="email" id="email" placeholder="example@gmail.com" required><br><br>
-        
-        <label for="password">Password: </label>
-        <input type="password" id="password" placeholder="Enter your password" required><br><br>
-        
-        <input type="submit" value="Login" class="submit">
-        
-        <p style="text-align: center; margin-top: 15px; font-size: 16px;">
-            Want to create new account? <a class="login_page_sign_up" href="register.html">Sign Up</a>
-        </p>
-        <p style="text-align: center;">
-            <a class="login_page_sign_up" href="index.html">← Go to main page</a>
-        </p>
-    </form>
+    <div class="login_form">
+        <form onsubmit="handleLogin(event)">
+            <h2>Login</h2>
+            
+            <label  for="email">Email: </label>
+            <input type="email" id="email" placeholder="example@gmail.com" required><br><br>
+            
+            <label for="password">Password: </label>
+            <input type="password" id="password" placeholder="Enter your password" required><br><br>
+            
+            <input type="submit" value="Login" class="submit">
+            
+            <p style="text-align: center; margin-top: 15px; font-size: 16px;">
+                Want to create new account? <a class="login_page_sign_up" href="register.html">Sign Up</a>
+            </p>
+            <p style="text-align: center;">
+                <a class="login_page_sign_up" href="index.html">← Go to main page</a>
+            </p>
+        </form>
+    </div>
 </body>
 </html>
